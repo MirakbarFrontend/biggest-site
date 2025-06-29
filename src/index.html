@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FCIOM</title>
+		<link href="./output.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="md:pt-3 md:pb-4 lg:py-2 bg-[#0A0A0A]">
+			<div class="max-w-[1165px] w-full mx-auto px-5 flex items-center justify-between">
+				<!-- Logo -->
+				<img
+					class="hidden md:block w-[180px] lg:w-[238px] h-5 lg:h-[30px] transition-transform duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+					src="/img/logo-header.svg"
+					alt="header-logo" />
+				<img class="mx-3 w-16 h-[16px] block md:hidden" src="/img/header-minilogo.svg" alt="" />
+
+				<!-- Menu -->
+				<ul class="hidden md:flex items-center justify-center">
+					<li class="text-[10px] lg:text-xs font-semibold mr-5 lg:mr-[29px] text-white">
+						<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">Как работает</a>
+					</li>
+					<li class="text-[10px] lg:text-xs font-semibold mr-5 lg:mr-[29px] text-white">
+						<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">что умеем</a>
+					</li>
+					<li class="text-[10px] lg:text-xs font-semibold text-white">
+						<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">о нас</a>
+					</li>
+				</ul>
+
+				<!-- CTA Block -->
+				<div
+					class="hidden bg-[#67A7394D] hover:bg-[#67a7399b] transition-colors duration-300 rounded-[20px] px-2.5 lg:px-[16px] py-[7px] lg:py-[9px] md:flex items-center justify-between shadow-lg cursor-pointer max-w-[300px] lg:max-w-[377px] w-full">
+					<!-- Text -->
+					<span class="text-white font-semibold text-[8px] lg:text-xs uppercase tracking-wide"> ПОДОБРАТЬ ТЮНИНГ — РЕШЕНИЕ </span>
+
+					<!-- Icons -->
+					<div class="flex items-center space-x-3">
+						<!-- WhatsApp Icon -->
+						<a
+							href="https://wa.me/"
+							class="text-white hover:text-green-300 transition-colors duration-200"
+							title="WhatsApp"
+							target="_blank">
+							<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386" />
+							</svg>
+						</a>
+
+						<!-- Telegram Icon -->
+						<a
+							href="https://t.me/"
+							class="text-white hover:text-green-300 transition-colors duration-200"
+							title="Telegram"
+							target="_blank">
+							<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+							</svg>
+						</a>
+
+						<!-- Phone Icon -->
+						<a
+							href="tel:+"
+							class="text-white hover:text-green-300 transition-colors duration-200"
+							title="Позвонить"
+							target="_blank">
+							<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+							</svg>
+						</a>
+					</div>
+				</div>
+				<!-- Icons -->
+				<div class="md:hidden flex items-center space-x-3 py-3">
+					<!-- WhatsApp Icon -->
+					<a
+						href="https://wa.me/"
+						class="text-white hover:text-green-300 transition-colors duration-200"
+						title="WhatsApp"
+						target="_blank">
+						<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386" />
+						</svg>
+					</a>
+
+					<!-- Telegram Icon -->
+					<a
+						href="https://t.me/"
+						class="text-white hover:text-green-300 transition-colors duration-200"
+						title="Telegram"
+						target="_blank">
+						<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+						</svg>
+					</a>
+
+					<!-- Phone Icon -->
+					<a
+						href="tel:+"
+						class="text-white hover:text-green-300 transition-colors duration-200"
+						title="Позвонить"
+						target="_blank">
+						<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<main class="bg-[#1A1A1A]">
+			<ul class="md:hidden flex items-center justify-center pt-[19px] pb-[19px]">
+				<li class="text-xs font-semibold mr-[29px] text-white">
+					<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">Как работает</a>
+				</li>
+				<li class="text-xs font-semibold mr-[29px] text-white">
+					<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">что умеем</a>
+				</li>
+				<li class="text-xs font-semibold text-white">
+					<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">о нас</a>
+				</li>
+			</ul>
+
+			<section class="pt-[18px] md:pt-7 lg:pt-10 xl:pt-[66px] pb-[50px] lg:pb-[60px] xl:pb-[81px]">
+				<div class="max-w-[1173px] mx-auto px-5 flex-col md:flex-row text-center md:text-start flex items-center justify-between">
+					<div class="max-w-[286px] md:max-w-[320px] lg:max-w-[400px] xl:max-w-[684px] w-full text-white">
+						<h2 class="text-2xl xl:text-[34px] font-bold leading-tight mb-[15px] xl:mb-[19px] uppercase">
+							Прошивка любого блока под ваш VIN. вообще любого.
+							<span class="text-[#67A739]"
+								><br />
+								даже новый FCIOM.</span
+							>
+						</h2>
+						<p class="text-[18px] xl:text-2xl font-medium text-[#67A739] mb-10 md:mb-7 xl:mb-[41px]">
+							Услуга [8230] Stock programming <br />
+							в приложении M4
+						</p>
+						<p class="text-3xl xl:text-4xl font-bold mb-7 xl:mb-[41px] hidden md:block">
+							ЦЕНА: <span class="text-white">32 050₽</span> / <span class="text-[#BDBDBD]">400$</span>
+						</p>
+
+						<button
+							class="text-nowrap py-[7px] pr-6 pl-3 md:flex items-center bg-[#67A739] hover:bg-[#59C70B] active:bg-[#4d8c2a] transition rounded-[20px] shadow-lg hidden">
+							<a href="https://wa.me/" target="_blank">
+								<svg class="w-[41px] xl:w-16 h-[41px] xl:h-16 mr-[11px] xl:mr-5" fill="white" viewBox="0 0 24 24">
+									<path
+										d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386" />
+								</svg>
+							</a>
+							<span class="text-white font-semibold text-2xl">Получить консультацию</span>
+						</button>
+					</div>
+
+					<img
+						class="w-[277px] md:w-[377px] lg:w-[477px] xl:w-[617px] h-[187px] md:h-[240] lg:h-[300px] xl:h-[417px] mb-10 md:mb-0"
+						src="/img/img-hero.png"
+						alt="fciom-block"
+						width="617"
+						height="417" />
+
+					<p class="text-2xl md:text-3xl xl:text-4xl font-bold mb-5 md:mb-7 xl:mb-[41px] block md:hidden text-white">
+						ЦЕНА: <span class="text-white">32 050₽</span> / <span class="text-[#BDBDBD]">400$</span>
+					</p>
+
+					<button
+						class="text-nowrap py-[7px] pr-6 pl-3 flex items-center bg-[#67A739] hover:bg-[#59C70B] active:bg-[#4d8c2a] transition rounded-[20px] shadow-lg md:hidden max-w-[280px] md:max-w-[433px]">
+						<a href="https://wa.me/" target="_blank">
+							<svg class="w-[35px] xl:w-16 h-[35px] xl:h-16 mr-[11px] xl:mr-5" fill="white" viewBox="0 0 24 24">
+								<path
+									d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386" />
+							</svg>
+						</a>
+						<span class="text-white font-semibold text-[15px] md:text-2xl">Получить консультацию</span>
+					</button>
+				</div>
+			</section>
+
+			<div class="pb-[50px] md:pb-[70px] lg:pb-[100px] text-white">
+				<div class="max-w-[1176px] mx-auto px-5">
+					<div class="mb-[50px] lg:mb-[30px] max-w-[280px] mx-auto text-center md:mb-7 md:text-start md:max-w-full">
+						<h2 class="font-bold text-2xl lg:text-[32px] mb-[30px]">Mochester App — тюнинг доступный каждому!</h2>
+						<p class="font-light text-[14px] lg:text-2xl text-[#8B8B8B]">
+							Mochester App — простой и мощный инструмент для тюнинга грузовиков, автобусов и спецтехники. Прошивка VIN,
+							отключение систем DPF, EGR, DEF/SCR, увеличение мощности — всё это без дилеров и сложного оборудования.
+						</p>
+					</div>
+					<div
+						class="bg-[#212121] w-full px-5 py-[19px] md:py-7 lg:py-8 flex-col md:flex-row flex items-center justify-between gap-4">
+						<div class="max-w-[305px] md:max-w-[547px] w-full flex-col md:flex-row flex items-center justify-center">
+							<img
+								class="w-[100px] lg:w-[130px] h-[100px] lg:h-[130px] mb-2.5 md:mb-0 mr-0 md:mr-[21px] lg:mr-[31px]"
+								src="/img/windows.png"
+								alt="windows" />
+							<p class="font-semibold text-[14px] lg:text-2xl text-[#B2B2B2] text-center md:text-start">
+								Воспользуйтесь этой услугой <br />
+								на вашем ПК с Windows!
+							</p>
+						</div>
+						<div
+							class="max-w-[380px] lg:max-w-[462px] w-full flex-col md:flex-row flex items-center justify-between text-center md:text-start">
+							<img class="w-[100px] lg:w-[142px] h-[100px] lg:h-[142px] mb-2.5 md:mb-0 mr-0 md:mr-4" src="/img/m4.png" alt="m4" />
+							<div class="max-w-[274px] w-full">
+								<h2 class="font-semibold text-2xl lg:text-[32px] mb-3.5 lg:mb-[21px]">Mochester App</h2>
+								<p
+									id="openModalBtn"
+									class="cursor-pointer font-normal text-[23px] flex items-center justify-center mb-3.5 lg:mb-[21px]">
+									Отзывов(69)
+									<img class="w-[100px] lg:w-[130px] h-[21px] ml-[14px]" src="/img/stars.png" alt="stars" />
+								</p>
+
+								<a class="text-[#68A738] text-xs lg:text-[23px] font-normal underline" href="/">Скачать Mochester App</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="reviewModal" class="hidden transition-all duration-500 pt-16 lg:pt-20">
+					<div
+						class="bg-[#1F1F1F] max-w-[1165px] mx-auto rounded-xl pt-7 lg:pt-[34px] pb-11 lg:pb-[52px] px-16 gap-7 flex justify-between items-center mb-10">
+						<div class="w-[484px] flex-col md:flex-row flex items-start justify-start">
+							<img
+								src="/img/person.png"
+								alt="avatar"
+								class="w-[52px] md:w-21.5 h-[52px] md:h-[86px] mr-[26px] mb-[26px] md:mb-0" />
+							<div>
+								<div class="flex-col md:flex-row flex items-start justify-between mb-3">
+									<div class="mb-9 md:mb-0">
+										<h4 class="font-bold text-[16px] md:text-sm mb-[5px]">Liam Gram, Truck Operator (USA)</h4>
+										<p class="text-xs text-gray-400">March 3, 2025</p>
+									</div>
+									<div class="text-yellow-400 text-sm">★★★★★</div>
+								</div>
+								<div class="flex mb-3.5">
+									<button
+										class="bg-[#67A73980] hover:bg-[#67A739] active:bg-[#4e832d] text-white px-2.5 py-1.5 rounded-[10px] text-xs font-medium mr-[11px] transition-all duration-200 text-nowrap">
+										Vlomingо
+									</button>
+
+									<button
+										class="bg-transparent border border-[#67A73980] hover:bg-[#67A73940] active:bg-[#67A73980] text-white px-2.5 py-1.5 rounded-[10px] text-xs font-medium transition-all duration-200 text-nowrap">
+										Configuration tuning
+									</button>
+								</div>
+								<p class="text-[14px] md:text-[16px] font-normal text-[#8B8B8B]">
+									"The VILKUS-62 emulator completely changed the game for my truck. Installation was quick, and since then, I've
+									had zero issues with the SCR and...
+									<span class="text-green-400">read more</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="w-[484px] hidden md:flex items-start justify-start">
+							<img src="/img/person.png" alt="avatar" class="w-[86px] h-[86px] mr-[26px]" />
+							<div>
+								<div class="flex items-start justify-between mb-3">
+									<div>
+										<h4 class="font-bold text-sm">Liam Gram, Truck Operator (USA)</h4>
+										<p class="text-xs text-gray-400">March 3, 2025</p>
+									</div>
+									<div class="text-yellow-400 text-sm">★★★★★</div>
+								</div>
+								<div class="flex mb-[14px]">
+									<button
+										class="bg-[#67A73980] hover:bg-[#67A739] active:bg-[#4e832d] text-white px-2.5 py-1.5 rounded-[10px] text-xs font-medium mr-[11px] transition-all duration-200 text-nowrap">
+										Vlomingо
+									</button>
+
+									<button
+										class="bg-transparent border border-[#67A73980] hover:bg-[#67A73940] active:bg-[#67A73980] text-white px-2.5 py-1.5 rounded-[10px] text-xs font-medium transition-all duration-200 text-nowrap">
+										Configuration tuning
+									</button>
+								</div>
+								<p class="text-[16px] font-normal text-[#8B8B8B]">
+									"The VILKUS-62 emulator completely changed the game for my truck. Installation was quick, and since then, I've
+									had zero issues with the SCR and...
+									<span class="text-green-400">read more</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pb-[44px]">
+				<div class="max-w-[1176px] mx-auto px-5">
+					<div class="flex items-center justify-between mb-[33px] md:mb-[50px]">
+						<h2
+							class="text-white text-[26px] lg:text-[32px] font-bold mx-auto text-center md:text-start max-w-[244px] md:max-w-full">
+							Как с нами взаимодействовать
+						</h2>
+						<img class="hidden md:block w-[286px] h-5" src="/img/rutube-logo.png" alt="rutube-logo" />
+					</div>
+					<div class="flex justify-center">
+						<ul class="mr-[18px] hidden md:block">
+							<li>
+								<div
+									class="py-[22px] px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[61px] h-[61px] rounded-[20px] text-white font-bold text-2xl flex items-center justify-center mb-10">
+									1
+								</div>
+							</li>
+							<li>
+								<div
+									class="py-[22px] px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[61px] h-[61px] rounded-[20px] text-white font-bold text-2xl flex items-center justify-center mb-10">
+									2
+								</div>
+							</li>
+							<li>
+								<div
+									class="py-[22px] px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[61px] h-[61px] rounded-[20px] text-white font-bold text-2xl flex items-center justify-center mb-10">
+									3
+								</div>
+							</li>
+							<li>
+								<div
+									class="py-[22px] px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[61px] h-[61px] rounded-[20px] text-white font-bold text-2xl flex items-center justify-center mb-10">
+									4
+								</div>
+							</li>
+							<li>
+								<div
+									class="py-[22px] px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[61px] h-[61px] rounded-[20px] text-white font-bold text-2xl flex items-center justify-center mb-10">
+									5
+								</div>
+							</li>
+							<li>
+								<div
+									class="py-[22px] px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[61px] h-[61px] rounded-[20px] text-white font-bold text-2xl flex items-center justify-center">
+									6
+								</div>
+							</li>
+						</ul>
+						<ul>
+							<li
+								class="py-[13px] px-4 bg-[#1F1F1F] hover:bg-[#67A7391A] active:bg-[#4d8c2a] transition flex items-start rounded-[20px] mb-10">
+								<div
+									class="md:hidden py-[13px] md:py-[22px] px-[14px] md:px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[37px] md:w-[61px] h-[37px] md:h-[61x] rounded-xl md:rounded-[20px] text-white font-bold text-[14px] md:text-2xl flex items-center justify-center mr-[14px]">
+									1
+								</div>
+								<img class="w-[75px] h-[35px] mr-[27px] hidden md:block" src="/img/logo1.svg" alt="logo1" />
+								<p class="text-[18px] font-normal text-white">Скачайте приложение Mochester App</p>
+							</li>
+							<li
+								class="py-[13px] px-4 bg-[#1F1F1F] hover:bg-[#67A7391A] active:bg-[#4d8c2a] transition flex items-start rounded-[20px] mb-10">
+								<div
+									class="md:hidden py-[13px] md:py-[22px] px-[14px] md:px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[37px] md:w-[61px] h-[37px] md:h-[61x] rounded-xl md:rounded-[20px] text-white font-bold text-[14px] md:text-2xl flex items-center justify-center mr-[14px]">
+									2
+								</div>
+								<img class="w-[75px] h-[35px] mr-[27px] hidden md:block" src="/img/logo2.svg" alt="logo1" />
+								<p class="text-[18px] font-normal text-white">
+									Зарегистрируйте аккаунт на нашем
+									<a
+										class="text-[#68A738] underline"
+										href="https://drive.google.com/drive/folders/1VdFnHN4zVRZ37TNDVtYEzd7Mqx2lbIxV"
+										>официальном сайте</a
+									>
+									магазина
+								</p>
+							</li>
+							<li
+								class="py-[7px] px-4 bg-[#1F1F1F] hover:bg-[#67A7391A] active:bg-[#4d8c2a] transition flex items-start rounded-[20px] mb-10">
+								<div
+									class="md:hidden py-[13px] md:py-[22px] px-[14px] md:px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[37px] md:w-[61px] h-[37px] md:h-[61x] rounded-xl md:rounded-[20px] text-white font-bold text-[14px] md:text-2xl flex items-center justify-center mr-[14px]">
+									3
+								</div>
+								<img class="w-[75px] h-[35px] mr-[27px] hidden md:block" src="/img/logo3.svg" alt="logo1" />
+								<p class="text-[18px] font-normal text-white">
+									Проверьте наличие необходимой тюнинг-услуги для вашей техники по VIN или номеру шасси через Mochester App
+								</p>
+							</li>
+							<li
+								class="py-[7px] px-4 bg-[#1F1F1F] hover:bg-[#67A7391A] active:bg-[#4d8c2a] transition flex items-start rounded-[20px] mb-10">
+								<div
+									class="md:hidden py-[13px] md:py-[22px] px-[14px] md:px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[37px] md:w-[61px] h-[37px] md:h-[61x] rounded-xl md:rounded-[20px] text-white font-bold text-[14px] md:text-2xl flex items-center justify-center mr-[14px]">
+									4
+								</div>
+								<img class="w-[75px] h-[35px] mr-[27px] hidden md:block" src="/img/logo4.svg" alt="logo1" />
+								<p class="text-[18px] font-normal text-white">
+									Пополните кошелек вашего аккаунта в нашем магазине. Оплату принимаем в рублях через российскую платежную
+									систему.
+								</p>
+							</li>
+							<li
+								class="py-[9px] px-4 bg-[#1F1F1F] hover:bg-[#67A7391A] active:bg-[#4d8c2a] transition flex items-start rounded-[20px] mb-10">
+								<div
+									class="md:hidden py-[13px] md:py-[22px] px-[14px] md:px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[37px] md:w-[61px] h-[37px] md:h-[61x] rounded-xl md:rounded-[20px] text-white font-bold text-[14px] md:text-2xl flex items-center justify-center mr-[14px]">
+									5
+								</div>
+								<img class="w-[75px] h-[35px] mr-[27px] hidden md:block" src="/img/logo5.svg" alt="logo1" />
+								<p class="text-[18px] font-normal text-white">Получите услугу тюнинга и гарантию на нее</p>
+							</li>
+							<li
+								class="py-[9px] px-4 bg-[#1F1F1F] hover:bg-[#67A7391A] active:bg-[#4d8c2a] transition flex items-center rounded-[20px] mb-10">
+								<div
+									class="md:hidden py-[13px] md:py-[22px] px-[14px] md:px-[25px] border-2 border-[#67A739] hover:bg-[#67A739] transition w-[37px] md:w-[61px] h-[37px] md:h-[61x] rounded-xl md:rounded-[20px] text-white font-bold text-[14px] md:text-2xl flex items-center justify-center mr-[14px]">
+									6
+								</div>
+								<img class="w-[75px] h-[35px] mr-[27px] hidden md:block" src="/img/logo6.svg" alt="logo1" />
+								<p class="text-[18px] font-normal text-white">
+									Если у вас остались вопросы - мы
+									<a
+										class="text-[#68A738] underline"
+										href="https://drive.google.com/drive/folders/1VdFnHN4zVRZ37TNDVtYEzd7Mqx2lbIxV"
+										>здесь</a
+									>
+									24/7. Или ознакомьтесь с нашей <span class="text-[#67A739]">видеоинструкцией.</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Outer container with glow -->
+					<div
+						class="max-w-[1176px] mx-auto px-5 rounded-xl border border-[#67A739] shadow-[0_0_30px_#67A739] bg-black bg-opacity-80 p-4 md:p-6 lg:p-10 text-center">
+						<img
+							src="/img/r-img.svg"
+							alt="R Logo"
+							class="relative top-[-6px] md:top-[-16px] lg:top-[-24px] left-[-8px] md:left-[-35pxs] w-[15px] md:w-[40px] lg:w-[62px] h-[15px] md:h-[40px] lg:h-[62px]" />
+
+						<div id="coverContent">
+							<!-- Logo -->
+							<div class="flex items-center justify-center tracking-widest mb-[19px] md:mb-[40px] lg:mb-[79px]">
+								<img
+									class="w-[135px] md:w-[300px] lg:w-[544px] h-[15px] md:h-[40px] lg:h-[61px]"
+									src="/img/drunklub.svg"
+									alt="drunklub"
+									width="544"
+									height="61" />
+							</div>
+
+							<!-- Play button -->
+							<div
+								onclick="playVideo()"
+								class="w-[38px] md:w-[90px] lg:w-[152px] h-[38px] md:h-[90px] lg:h-[152px] bg-[#67A739] rounded-full mx-auto flex items-center justify-center mb-[40px] lg:mb-[79px] cursor-pointer transition hover:scale-105">
+								<svg class="w-[75px] h-[75px] text-black" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M6.5 5.5v9l8-4.5-8-4.5z" clip-rule="evenodd" />
+								</svg>
+							</div>
+
+							<!-- Description -->
+							<p
+								class="hidden md:block text-[24px] lg:text-[36px] leading-snug font-bold text-white max-w-[600px] lg:max-w-[939px] w-full text-center mx-auto">
+								Регистрация на официальном сайте магазина и демонстрация тюнинга грузовика через приложение Mochester App
+							</p>
+						</div>
+
+						<!-- Hidden Video -->
+						<div id="videoWrapper" class="absolute inset-0 rounded-xl overflow-hidden hidden">
+							<video id="drunkVideo" class="w-full h-full object-cover" controls>
+								<source src="your-video-file.mp4" type="video/mp4" />
+								Ваш браузер не поддерживает видео.
+							</video>
+						</div>
+					</div>
+				</div>
+				<div class="flex items-center justify-center">
+					<img class="block md:hidden w-[173px] h-3 mt-[19px]" src="/img/rutube-logo.png" alt="rutube-logo" />
+				</div>
+			</div>
+
+			<!-- Что умеет приложение Mochester App -->
+			<div class="py-[50px]">
+				<div class="max-w-[1176px] w-full mx-auto px-5">
+					<div class="mb-[50px] flex-col md:flex-row flex items-center justify-between text-center md:text-start">
+						<h2 class="font-bold text-[24px] md:text-[28px] lg:text-[32px] text-white">Что умеет приложение Mochester App</h2>
+						<a class="font-bold text-xs md:text-[16px] lg:text-2xl text-[#67A739] underline" href="/">Official Store (eng)</a>
+					</div>
+					<ul>
+						<li class="group bg-[#1F1F1F] hover:bg-[#67A739] rounded-[20px] text-[#67A739] transition mb-[15px] p-[18px]">
+							<div class="cursor-pointer flex justify-between items-start md:items-center toggle-header">
+								<span class="font-bold text-[16px] md:text-[20px] group-hover:text-[#1F1F1F] max-w-[226px] md:max-w-full">
+									Знакомство с нами и демонстрация работы: бесплатное чтение и расшифровка ошибок
+								</span>
+								<svg
+									class="w-5 h-5 transition-transform duration-300 toggle-icon group-hover:text-[#1F1F1F]"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</div>
+
+							<div
+								class="toggle-content hidden rounded-[20px] flex-col md:flex-row flex items-start md:items-end justify-center md:justify-between">
+								<div class="max-w-[563px] w-full text-[#FFFFFF80] group-hover:text-[#21261D]">
+									<p class="font-bold mb-2.5 md:mb-0 mt-[19px] md:mt-0">Бренды, с которыми доступна эта услуга:</p>
+									<ul class="list-disc p-[18px] text-[16px] grid grid-cols-1 md:grid-cols-4 mt-2.5">
+										<li>Volvo Trucks</li>
+										<li>Volvo CE</li>
+										<li>Mack Trucks</li>
+										<li>Prevost</li>
+										<li>Volvo Buses</li>
+										<li>Volvo Penta</li>
+										<li>Renault Trucks</li>
+										<li>UD Trucks</li>
+									</ul>
+								</div>
+
+								<button
+									class="border-2 text-[#8B8B8B] border-[#8B8B8B] group-hover:border-[#1A1A1A] pl-[25px] pr-3 py-[21px] rounded-[20px] font-semibold text-[16px] transition group-hover:text-[#1A1A1A] hover:bg-[#59C70B]">
+									Скачать Mochester App
+								</button>
+							</div>
+						</li>
+
+						<li class="group bg-[#1F1F1F] hover:bg-[#67A739] rounded-[20px] text-[#67A739] transition mb-[15px] p-[18px]">
+							<div class="cursor-pointer flex justify-between items-start md:items-center toggle-header">
+								<span class="font-bold text-[16px] md:text-[20px] group-hover:text-[#1F1F1F] max-w-[226px] md:max-w-full">
+									ECU Stock Прошивка любого блока под ваш VIN. Вообще любого. Даже новый FCIOM.
+								</span>
+								<svg
+									class="w-5 h-5 transition-transform duration-300 toggle-icon group-hover:text-[#1F1F1F]"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</div>
+
+							<div
+								class="toggle-content hidden rounded-[20px] flex-col md:flex-row flex items-start md:items-end justify-center md:justify-between">
+								<div class="max-w-[563px] w-full text-[#FFFFFF80] group-hover:text-[#21261D]">
+									<p class="font-light text-[16px] mb-7 mt-[13px] max-w-[244px] md:max-w-full">
+										Услуга позволяет заменить ECU блок с "чужим" VIN и прошить его под ваш родной номер для корректной работы и
+										идентификации в системе.
+									</p>
+									<p class="font-bold mb-2.5 md:mb-0 mt-[19px] md:mt-0">Бренды, с которыми доступна эта услуга:</p>
+									<ul class="list-disc p-[18px] text-[16px] grid grid-cols-1 md:grid-cols-4 mt-2.5">
+										<li>Volvo Trucks</li>
+										<li>Volvo CE</li>
+										<li>Mack Trucks</li>
+										<li>Prevost</li>
+										<li>Volvo Buses</li>
+										<li>Volvo Penta</li>
+										<li>Renault Trucks</li>
+										<li>UD Trucks</li>
+									</ul>
+								</div>
+
+								<button
+									class="border-2 text-[#8B8B8B] border-[#8B8B8B] group-hover:border-[#1A1A1A] pl-[25px] pr-3 py-[21px] rounded-[20px] font-semibold text-[16px] transition group-hover:text-[#1A1A1A] hover:bg-[#59C70B]">
+									Скачать Mochester App
+								</button>
+							</div>
+						</li>
+						<li class="group bg-[#1F1F1F] hover:bg-[#67A739] rounded-[20px] text-[#67A739] transition mb-[15px] p-[18px]">
+							<div class="cursor-pointer flex justify-between items-start md:items-center toggle-header">
+								<span class="font-bold text-[16px] md:text-[20px] group-hover:text-[#1F1F1F] max-w-[226px] md:max-w-full">
+									Отключение DPF
+								</span>
+								<svg
+									class="w-5 h-5 transition-transform duration-300 toggle-icon group-hover:text-[#1F1F1F]"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</div>
+
+							<div
+								class="toggle-content hidden rounded-[20px] flex-col md:flex-row flex items-start md:items-end justify-center md:justify-between">
+								<div class="max-w-[563px] w-full text-[#FFFFFF80] group-hover:text-[#21261D]">
+									<p class="font-light text-[16px] mb-7 mt-[13px] max-w-[244px] md:max-w-full">
+										Система фильтрации сажевых частиц больше не влияет на работу двигателя: исчезают частые регенерации, ошибки и
+										потери мощности — особенно важно в тяжёлых условиях эксплуатации.
+									</p>
+									<p class="font-bold mb-2.5 md:mb-0 mt-[19px] md:mt-0">Бренды, с которыми доступна эта услуга:</p>
+									<ul class="list-disc p-[18px] text-[16px] grid grid-cols-1 md:grid-cols-4 mt-2.5">
+										<li>Volvo Trucks</li>
+										<li>Volvo CE</li>
+										<li>Mack Trucks</li>
+										<li>Prevost</li>
+										<li>Volvo Buses</li>
+										<li>Volvo Penta</li>
+										<li>Renault Trucks</li>
+										<li>UD Trucks</li>
+									</ul>
+								</div>
+
+								<button
+									class="border-2 text-[#8B8B8B] border-[#8B8B8B] group-hover:border-[#1A1A1A] pl-[25px] pr-3 py-[21px] rounded-[20px] font-semibold text-[16px] transition group-hover:text-[#1A1A1A] hover:bg-[#59C70B]">
+									Скачать Mochester App
+								</button>
+							</div>
+						</li>
+						<li class="group bg-[#1F1F1F] hover:bg-[#67A739] rounded-[20px] text-[#67A739] transition mb-[15px] p-[18px]">
+							<div class="cursor-pointer flex justify-between items-start md:items-center toggle-header">
+								<span class="font-bold text-[16px] md:text-[20px] group-hover:text-[#1F1F1F] max-w-[226px] md:max-w-full">
+									Отключение EGR
+								</span>
+								<svg
+									class="w-5 h-5 transition-transform duration-300 toggle-icon group-hover:text-[#1F1F1F]"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</div>
+
+							<div
+								class="toggle-content hidden rounded-[20px] flex-col md:flex-row flex items-start md:items-end justify-center md:justify-between">
+								<div class="max-w-[563px] w-full text-[#FFFFFF80] group-hover:text-[#21261D]">
+									<p class="font-light text-[16px] mb-7 mt-[13px] max-w-[244px] md:max-w-full">
+										Клапан рециркуляции отработанных газов исключается: работа двигателя становится стабильнее, отклик улучшается,
+										уменьшается риск загрязнения впускного коллектора, отсутствуют ошибки, связанные с неисправностью системы.*
+										 <br /><br /> *Для моделей начиная с 2014 года может потребоваться адаптер VLOMINGO
+									</p>
+									<p class="font-bold mb-2.5 md:mb-0 mt-[19px] md:mt-0">Бренды, с которыми доступна эта услуга:</p>
+									<ul class="list-disc p-[18px] text-[16px] grid grid-cols-1 md:grid-cols-4 mt-2.5">
+										<li>Volvo Trucks</li>
+										<li>Volvo CE</li>
+										<li>Mack Trucks</li>
+										<li>Prevost</li>
+										<li>Volvo Buses</li>
+										<li>Volvo Penta</li>
+										<li>Renault Trucks</li>
+										<li>UD Trucks</li>
+									</ul>
+								</div>
+
+								<button
+									class="border-2 text-[#8B8B8B] border-[#8B8B8B] group-hover:border-[#1A1A1A] pl-[25px] pr-3 py-[21px] rounded-[20px] font-semibold text-[16px] transition group-hover:text-[#1A1A1A] hover:bg-[#59C70B]">
+									Скачать Mochester App
+								</button>
+							</div>
+						</li>
+						<li class="group bg-[#1F1F1F] hover:bg-[#67A739] rounded-[20px] text-[#67A739] transition mb-[15px] p-[18px]">
+							<div class="cursor-pointer flex justify-between items-start md:items-center toggle-header">
+								<span class="font-bold text-[16px] md:text-[20px] group-hover:text-[#1F1F1F] max-w-[226px] md:max-w-full">
+									Отключение DEF/SCR
+								</span>
+								<svg
+									class="w-5 h-5 transition-transform duration-300 toggle-icon group-hover:text-[#1F1F1F]"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</div>
+
+							<div
+								class="toggle-content hidden rounded-[20px] flex-col md:flex-row flex items-start md:items-end justify-center md:justify-between">
+								<div class="max-w-[563px] w-full text-[#FFFFFF80] group-hover:text-[#21261D]">
+									<p class="font-light text-[16px] mb-7 mt-[13px] max-w-[244px] md:max-w-full">
+										Система нейтрализации выбросов исключается: снижаются расходы и отпадает необходимость в использовании
+										DEF-жидкости (мочевины, она же AdBlue).
+									</p>
+									<p class="font-bold mb-2.5 md:mb-0 mt-[19px] md:mt-0">Бренды, с которыми доступна эта услуга:</p>
+									<ul class="list-disc p-[18px] text-[16px] grid grid-cols-1 md:grid-cols-4 mt-2.5">
+										<li>Volvo Trucks</li>
+										<li>Volvo CE</li>
+										<li>Mack Trucks</li>
+										<li>Prevost</li>
+										<li>Volvo Buses</li>
+										<li>Volvo Penta</li>
+										<li>Renault Trucks</li>
+										<li>UD Trucks</li>
+									</ul>
+								</div>
+
+								<button
+									class="border-2 text-[#8B8B8B] border-[#8B8B8B] group-hover:border-[#1A1A1A] pl-[25px] pr-3 py-[21px] rounded-[20px] font-semibold text-[16px] transition group-hover:text-[#1A1A1A] hover:bg-[#59C70B]">
+									Скачать Mochester App
+								</button>
+							</div>
+						</li>
+					</ul>
+					<div class="mx-auto max-w-[373px] w-full mt-[50px]">
+						<button class="py-[26px] px-[41px] border border-[#67A739] text-[#67A739] rounded-[20px] text-[16px] font-bold">
+							полный каталог услуг на DL.GE
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="pt-[50px] pb-[50px] bg-[#1F1F1F]">
+				<div class="max-w-[1173px] w-full mx-auto px-[34px] pt-[40px] pb-[73px]">
+					<div class="mb-[40px] lg:mb-[50px] text-center md:text-start">
+						<h2 class="font-bold text-[28px] lg:text-[32px] mb-[30px] text-white">Немного о нас</h2>
+						<p class="block md:hidden font-bold text-[16px] text-white text-center max-w-[249px] w-full mx-auto">
+							Mochester App — всё для профессиональной прошивки транспорта в одном удобном решении.
+						</p>
+						<p class="hidden md:block font-light text-[14px] lg:text-2xl text-[#8B8B8B]">
+							Мы помогаем экономить: минимум затрат — максимум надёжности и круглосуточная <br />
+							поддержка 7 дней в неделю. Более 15 лет опыта и тысячи довольных клиентов. DrunkLab <br />
+							— ваш надёжный партнёр.
+						</p>
+					</div>
+					<div
+						class="max-w-[246px] md:max-w-[1176px] mx-auto px-5 rounded-xl border border-[#67A739] shadow-[0_0_30px_#67A739] bg-black bg-opacity-80 p-4 md:p-6 lg:p-10 text-center block md:hidden mb-[30px]">
+						<img
+							src="/img/r-img.svg"
+							alt="R Logo"
+							class="relative top-[-6px] md:top-[-16px] lg:top-[-24px] left-[-8px] md:left-[-35pxs] w-[20px] md:w-[40px] lg:w-[62px] h-[20px] md:h-[40px] lg:h-[62px]" />
+
+						<div id="coverContent">
+							<!-- Logo -->
+							<div class="flex items-center justify-center tracking-widest mb-[19px] md:mb-[40px] lg:mb-[79px]">
+								<img
+									class="w-[127px] md:w-[300px] lg:w-[544px] h-[15px] md:h-[40px] lg:h-[61px]"
+									src="/img/drunklub.svg"
+									alt="drunklub"
+									width="544"
+									height="61" />
+							</div>
+
+							<!-- Play button -->
+							<div
+								onclick="playVideo()"
+								class="w-[35px] md:w-[90px] lg:w-[152px] h-[35px] md:h-[90px] lg:h-[152px] bg-[#67A739] rounded-full mx-auto flex items-center justify-center mb-[19px] md:mb-[40px] lg:mb-[79px] cursor-pointer transition hover:scale-105">
+								<svg class="w-[75px] h-[75px] text-black" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M6.5 5.5v9l8-4.5-8-4.5z" clip-rule="evenodd" />
+								</svg>
+							</div>
+
+							<!-- Description -->
+							<p
+								class="hidden md:block text-[24px] lg:text-[36px] leading-snug font-bold text-white max-w-[600px] lg:max-w-[787px] w-full text-center mx-auto">
+								Mochester App — всё для профессиональной прошивки транспорта в одном удобном решении.
+							</p>
+							<p class="block md:hidden font-bold text-[6px] text-white">Подробнее о нас</p>
+						</div>
+
+						<!-- Hidden Video -->
+						<div id="videoWrapper" class="absolute inset-0 rounded-xl overflow-hidden hidden">
+							<video id="drunkVideo" class="w-full h-full object-cover" controls>
+								<source src="your-video-file.mp4" type="video/mp4" />
+								Ваш браузер не поддерживает видео.
+							</video>
+						</div>
+					</div>
+					<p class="block md:hidden font-light text-[14px] lg:text-2xl text-[#8B8B8B] mx-auto max-w-[249px] w-full">
+						Мы помогаем экономить: минимум затрат — максимум надёжности и круглосуточная <br />
+						поддержка 7 дней в неделю. Более 15 лет опыта и тысячи довольных клиентов. DrunkLab <br />
+						— ваш надёжный партнёр.
+					</p>
+					<ul
+						class="mb-[50px] flex-col md:flex-row flex items-center justify-start mt-[30px] md:mt-0 bg-[#1A1A1A] md:bg-transparent max-w-[246px] md:max-w-full w-full rounded-[20px] mx-auto">
+						<li
+							class="py-5 px-4 bg-[#1A1A1A] mr-[17px] rounded-[20px] flex items-center justify-center flex-row md:flex-col max-w-[197px] w-full">
+							<img class="w-[61px] h-[53px] mb-0 md:mb-[30px] mr-[27px] md:mr-0" src="/img/img1.svg" alt="img1" />
+							<h2 class="font-bold text-[14px] lg:text-[18px] text-white text-start md:text-center max-w-[134px] w-full">
+								Экономия денег
+							</h2>
+						</li>
+						<li
+							class="py-5 px-4 bg-[#1A1A1A] mr-[17px] rounded-[20px] flex items-center md:justify-center flex-row md:flex-col max-w-[197px] w-full">
+							<img class="w-[61px] h-[53px] mb-0 md:mb-[30px] mr-[27px] md:mr-0" src="/img/img2.svg" alt="img1" />
+							<h2 class="font-bold text-[14px] lg:text-[18px] text-white text-start md:text-center max-w-[134px] w-full">
+								Гарантия на <span class="text-nowrap">оказанные услуги</span>
+							</h2>
+						</li>
+						<li
+							class="py-5 px-4 bg-[#1A1A1A] mr-[17px] rounded-[20px] flex items-center justify-center flex-row md:flex-col max-w-[197px] w-full">
+							<img class="w-[61px] h-[53px] mb-0 md:mb-[30px] mr-[27px] md:mr-0" src="/img/img3.svg" alt="img1" />
+							<h2 class="font-bold text-[14px] lg:text-[18px] text-white text-start md:text-center max-w-[134px] w-full">
+								10,000+ клиентов
+							</h2>
+						</li>
+						<li
+							class="py-5 px-4 bg-[#1A1A1A] mr-[17px] rounded-[20px] flex items-center justify-center flex-row md:flex-col max-w-[197px] w-full">
+							<img class="w-[61px] h-[53px] mb-0 md:mb-[30px] mr-[27px] md:mr-0" src="/img/img4.svg" alt="img1" />
+							<h2 class="font-bold text-[14px] lg:text-[18px] text-white text-start md:text-center max-w-[134px] w-full">
+								Поддержка 24/7
+							</h2>
+						</li>
+						<li
+							class="py-5 px-4 bg-[#1A1A1A] mr-[17px] rounded-[20px] flex items-center justify-center flex-row md:flex-col max-w-[197px] w-full">
+							<img class="w-[61px] h-[53px] mb-0 md:mb-[30px] mr-[27px] md:mr-0" src="/img/img5.svg" alt="img1" />
+							<h2 class="font-bold text-[14px] lg:text-[18px] text-white text-start md:text-center max-w-[134px] w-full">
+								Более 15 лет на рынке
+							</h2>
+						</li>
+					</ul>
+					<!-- Outer container with glow -->
+					<div
+						class="hidden md:block max-w-[1176px] mx-auto px-5 rounded-xl border border-[#67A739] shadow-[0_0_30px_#67A739] bg-black bg-opacity-80 p-4 md:p-6 lg:p-10 text-center">
+						<img
+							src="/img/r-img.svg"
+							alt="R Logo"
+							class="relative top-[-6px] md:top-[-16px] lg:top-[-24px] left-[-8px] md:left-[-35pxs] w-[20px] md:w-[40px] lg:w-[62px] h-[20px] md:h-[40px] lg:h-[62px]" />
+
+						<div id="coverContent">
+							<!-- Logo -->
+							<div class="flex items-center justify-center tracking-widest mb-[19px] md:mb-[40px] lg:mb-[79px]">
+								<img
+									class="w-[127px] md:w-[300px] lg:w-[544px] h-[15px] md:h-[40px] lg:h-[61px]"
+									src="/img/drunklub.svg"
+									alt="drunklub"
+									width="544"
+									height="61" />
+							</div>
+
+							<!-- Play button -->
+							<div
+								onclick="playVideo()"
+								class="w-[35px] md:w-[90px] lg:w-[152px] h-[35px] md:h-[90px] lg:h-[152px] bg-[#67A739] rounded-full mx-auto flex items-center justify-center mb-[19px] md:mb-[40px] lg:mb-[79px] cursor-pointer transition hover:scale-105">
+								<svg class="w-[75px] h-[75px] text-black" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M6.5 5.5v9l8-4.5-8-4.5z" clip-rule="evenodd" />
+								</svg>
+							</div>
+
+							<!-- Description -->
+							<p
+								class="hidden md:block text-[24px] lg:text-[36px] leading-snug font-bold text-white max-w-[600px] lg:max-w-[787px] w-full text-center mx-auto">
+								Mochester App — всё для профессиональной прошивки транспорта в одном удобном решении.
+							</p>
+							<p class="block md:hidden font-bold text-[6px] text-white">Подробнее о нас</p>
+						</div>
+
+						<!-- Hidden Video -->
+						<div id="videoWrapper" class="absolute inset-0 rounded-xl overflow-hidden hidden">
+							<video id="drunkVideo" class="w-full h-full object-cover" controls>
+								<source src="your-video-file.mp4" type="video/mp4" />
+								Ваш браузер не поддерживает видео.
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer class="pt-[50px] md:pt-[70px] lg:pt-[97px] bg-[#0A0A0A]">
+				<div class="max-w-[1165px] w-full mx-auto px-5 py-7">
+					<div class="mb-[36px] lg:mb-[27px] flex-col md:flex-row flex items-center justify-center md:justify-between">
+						<!-- Logo -->
+						<img
+							class="w-[238px] h-[30px] transition-transform duration-300 hover:scale-105 active:scale-95 cursor-pointer mb-[30px] md:mb-0"
+							src="/img/logo-header.svg"
+							alt="header-logo" />
+
+						<!-- Menu -->
+						<ul class="flex items-center justify-center mb-[30px] md:mb-0">
+							<li class="text-xs font-semibold mr-[29px] text-white">
+								<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">Как работает</a>
+							</li>
+							<li class="text-xs font-semibold mr-[29px] text-white">
+								<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">что умеем</a>
+							</li>
+							<li class="text-xs font-semibold text-white">
+								<a href="/" class="transition-colors duration-200 hover:text-green-400 active:text-green-600">о нас</a>
+							</li>
+						</ul>
+
+						<div
+							class="bg-[#67A7394D] hover:bg-[#67a7399b] transition-colors duration-300 rounded-[20px] px-[26px] md:px-[16px] py-[16px] md:py-[9px] flex-col md:flex-row flex items-center justify-between shadow-lg cursor-pointer max-w-[262px] md:max-w[300px] lg:max-w-[377px] w-full">
+							<span class="text-white font-semibold text-xs md:text-[8px] lg:text-xs uppercase tracking-wide mb-[10px] md:mb-0">
+								ПОДОБРАТЬ ТЮНИНГ — РЕШЕНИЕ
+							</span>
+
+							<!-- Icons -->
+							<div class="flex items-center space-x-3">
+								<!-- WhatsApp Icon -->
+								<a
+									href="https://wa.me/"
+									class="text-white hover:text-green-300 transition-colors duration-200"
+									title="WhatsApp"
+									target="_blank">
+									<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386" />
+									</svg>
+								</a>
+
+								<!-- Telegram Icon -->
+								<a
+									href="https://t.me/"
+									class="text-white hover:text-green-300 transition-colors duration-200"
+									title="Telegram"
+									target="_blank">
+									<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+									</svg>
+								</a>
+
+								<!-- Phone Icon -->
+								<a
+									href="tel:+"
+									class="text-white hover:text-green-300 transition-colors duration-200"
+									title="Позвонить"
+									target="_blank">
+									<svg class="w-5 lg:w-7 h-5 lg:h-7" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="flex-col md:flex-row flex items-center md:justify-between">
+						<div class="flex items-start justify-start flex-col mb-[30px] md:mb-0">
+							<div class="flex-col md:flex-row flex items-center justify-center mb-5">
+								<div class="flex mr-[7px]">
+									<img class="w-[22] h-[22] mr-[7px]" src="/img/globe.svg" alt="globe" />
+									<a class="text-[#67A739] font-normal text-2.5 lg:text-[14px]" href="https://dl.ge/">https://dl.ge/</a>
+								</div>
+								<p class="font-light text-2.5 lg:text-[14px] text-[#8B8B8B]">Официальный магазин услуг DrunkLab</p>
+							</div>
+							<div class="flex-col md:flex-row flex items-center justify-center">
+								<div class="flex mr-[7px]">
+									<img class="w-[22] h-[22] mr-[7px]" src="/img/globe.svg" alt="globe" />
+									<a class="text-[#67A739] font-normal text-2.5 lg:text-[14px]" href="https://www.mochesterapp.com/"
+										>https://www.mochesterapp.com/</a
+									>
+								</div>
+								<p class="font-light text-2.5 lg:text-[14px] text-[#8B8B8B] text-nowrap">Официальный сайт Mochester App</p>
+							</div>
+						</div>
+						<div class="max-w-[260px] md:max-w-[306px] w-full text-center md:text-end">
+							<p class="font-light text-[14px] mb-[13px] text-[#8B8B8B]">
+								Mochester App goes beyond these services and offers additional improvements.
+							</p>
+							<p class="font-light text-[14px] text-[#8B8B8B]">© 2025 DrunkLab.</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</main>
+
+		<script>
+			const btn = document.getElementById('openModalBtn');
+			const modal = document.getElementById('reviewModal');
+
+			btn.addEventListener('click', () => {
+				modal.classList.toggle('hidden');
+			});
+
+			document.querySelectorAll('.toggle-header').forEach(header => {
+				header.addEventListener('click', () => {
+					const content = header.nextElementSibling;
+					const icon = header.querySelector('.toggle-icon');
+					content.classList.toggle('hidden');
+					icon.classList.toggle('rotate-180');
+				});
+			});
+		</script>
+	</body>
+</html>
