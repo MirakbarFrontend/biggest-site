@@ -1803,6 +1803,11 @@
       padding-top: calc(var(--spacing) * 20);
     }
   }
+  .lg\:pt-\[9px\] {
+    @media (width >= 64rem) {
+      padding-top: 9px;
+    }
+  }
   .lg\:pt-\[34px\] {
     @media (width >= 64rem) {
       padding-top: 34px;
